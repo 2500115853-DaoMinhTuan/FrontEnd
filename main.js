@@ -105,35 +105,35 @@
 
             {
                 id: 10,
-                name: "Nồi chiên không dầu LocknLock",
+                name: "Quạt điều hoà Kangaroo KG50F62 100W",
                 category: "dien-gia-dung",
-                price: 2190000,
-                oldPrice: 2890000,
-                icon: "🍳",
+                price: 1990000,
+                oldPrice: 3620000,
+                image: "https://cdn.tgdd.vn/Products/Images/7498/218312/may-lam-mat-khong-khi-kangaroo-kg50f62-1-1-700x467.jpg",
                 rating: 4.7,
-                tag: "GIẢM 20%"
+                tag: "-45%"
             },
 
             {
                 id: 11,
-                name: "Loa Bluetooth JBL",
-                category: "am-thanh",
-                price: 2990000,
-                oldPrice: 3690000,
-                icon: "🔊",
-                rating: 4.8,
-                tag: "FREESHIP"
+                name: "Loa tháp di động dạng kéo Samsung MX-ST50F 240W",
+                category: "loa",
+                price: 7990000,
+                oldPrice: 12990000,
+                image: "https://cdnv2.tgdd.vn/mwg-static/dmx/Products/Images/2162/358173/loa-keo-karaoke-samsung-mx-st50f-240w-1-638971817504394506-700x467.jpg",
+                rating: 5,
+                tag: "-38%"
             },
 
             {
                 id: 12,
-                name: "Máy hút bụi Xiaomi",
-                category: "may-hut-bui",
-                price: 2450000,
-                oldPrice: 3090000,
-                icon: "🧹",
+                name: "Bộ lau nhà 360 Lock&Lock ETM498",
+                category: "gia-dung",
+                price: 510000,
+                oldPrice: 897000,
+                image: "https://cdnv2.tgdd.vn/mwg-static/dmx/Products/Images/4927/367933/bo-lau-nha-locknlock-etm498-1-639165097265139828-700x467.jpg",
                 rating: 4.7,
-                tag: "BESTSELLER"
+                tag: "-43%"
             }
 
         ];
@@ -609,6 +609,55 @@
         renderProducts();
         updateCart();
 
-        function Dangnhap(){
-            
+        let danhSachTaiKhoan = [
+            { taiKhoan: "khach1", matKhau: "123456" },
+            { taiKhoan: "A", matKhau: "123" }
+        ];
+
+        let taiKhoanDangNhap = null;
+
+        const oTaiKhoan = document.getElementById("oTaiKhoan");
+        const oMatKhau = document.getElementById("oMatKhau");
+        const oThongBaoLoi = document.getElementById("thongBaoLoi");
+        const oManHinhDangNhap = document.getElementById("manHinhDangNhap");
+        const oManHinhCuaHang = document.getElementById("manHinhCuaHang");
+        const oTenDangNhap = document.getElementById("tenDangNhap");
+
+        function timTaiKhoan(taiKhoan) {
+            for (let i = 0; i <danhSachTaiKhoan.length; i++) {
+                if (danhSachTaiKhoan[i].taiKhoan === taiKhoan) {
+                    return danhSachTaiKhoan[i];
+                }
+            }
+            return null;
         }
+
+        function dangKy() {
+    const taiKhoan = oTaiKhoan.value;
+    const matKhau = oMatKhau.value;
+    const daTonTai = timTaiKhoan(taiKhoan);
+    if (daTonTai !== null){
+      oThongBaoLoi.classList = "thong-bao loi";
+      oThongBaoLoi.textContent = "Tài khoản đã tồn tại, vui lòng chọn tên khác.";
+      return;
+    }
+    danhSachTaiKhoan.push({taiKhoan: taiKhoan, matKhau : matKhau});
+    oThongBaoLoi.classList = "thong-bao thanh-cong";
+    oThongBaoLoi.textContent = "Đăng ký thành công! Bây giờ hãy đăng nhập.";
+  }
+        function Taikhoan(){
+            const taiKhoan = oTaiKhoan.value;
+    const matKhau = oMatKhau.value;
+
+    const tk = timTaiKhoan(taiKhoan);
+    if (tk === null || tk.matKhau !== matKhau){
+      oThongBaoLoi.classList = "thong-bao loi";
+      oThongBaoLoi.textContent = "Sai tài khoản hoặc mật khẩu.";
+      return;
+    }
+    taiKhoanDangNhap = taiKhoan;
+    oTaiKhoan.value = "";
+    oMatKhau.value = "";
+    oThongBaoLoi.textContent = "";
+    hienThiManHinh();
+}
