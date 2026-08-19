@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Điện Máy Xanh - Mua sắm điện máy online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <div class="top-header">
+        <div class="top-header-container">
+            <a href="#" class="top-header">
+                <img src="https://cdnv2.tgdd.vn/mwg-static/dmx/Banner/95/00/950020c22e166b30bc9613c475d7297f.png" alt="Logo" style="width: 100%; height: auto; display: block;">
+            </a>
+        </div>
+    </div>
+
+
+    <!-- ================= MAIN HEADER ================= -->
+
+    <header class="main-header">
+
+        <div class="header-container">
+
+
+            <!-- LOGO -->
+
+            <a href="#" class="logo">
+
+                <div class="logo-icon">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqEsjU_zGOMfVat_CuGdFUZT41vUaBf1--v_aHqYaFll_a8Iws_UiS3ek&s=10" alt="Logo" style="width: 60px; height: 36px;">
+                </div>
+
+                <div>
+                    <style>
+                        .logo-text {
+                            font-family: 'Times New Roman', serif;
+                            font-weight: bold;
+                            text-transform: uppercase;
+                            color: yellow;
+                            background-color: #0076a3;
+                            padding: 10px 20px;
+                            letter-spacing: 1px;
+                        }
+                    </style>
+                    <div class="logo-text">
+                        ĐIỆN MÁY XANH
+                    </div>
+
+                </div>
+
+            </a>
+
+
+            <!-- SEARCH -->
+
+            <div class="search-box">
+
+                <input type="text" id="searchInput" placeholder="Bạn tìm gì... Tivi, tủ lạnh, máy giặt...">
+
+                <button class="search-button" onclick="searchProducts()">
+                    🔍
+                </button>
+
+            </div>
+
+
+            <!-- ACTIONS -->
+
+            <div class="header-actions">
+
+                <button class="header-action" onclick="Dangnhap()">
+                    👤 Tài khoản
+                </button>
+
+                <button class="header-action" onclick="openCart()">
+
+                    🛒 Giỏ hàng
+
+                    <span id="cartCount" class="cart-count">
+                        0
+                    </span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <nav class="navigation">
+
+        <div class="navigation-container">
+
+            <a href="#" class="menu">
+                ☰ Danh mục sản phẩm
+            </a>
+
+            <a href="#categories">
+                Tủ lạnh
+            </a>
+
+            <a href="#categories">
+                Gia dụng
+            </a>
+
+            <a href="#categories">
+                Tivi
+            </a>
+
+            <a href="#categories">
+                Loa
+            </a>
+
+            <a href="#products">
+                Khuyến mãi
+            </a>
+
+            <a href="#footer">
+                Liên hệ
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <main class="container">
+
+
+        <!-- ================= BANNER ================= -->
+
+        <section class="banner-slider">
+            <div class="banner-container">
+                <a href="#">
+                    <img src="https://cdnv2.tgdd.vn/mwg-static/dmx/Banner/23/7f/237fe00d72bb07a64b1d01dfeb475fb6.jpg" alt="Banner 1" style="width: 100%; height: auto;">
+                </a>
+            </div>
+            
+            <div class="banner-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </section>
+
+
+        <!-- ================= BENEFITS ================= -->
+
+        <section class="benefits">
+
+            <div class="benefit">
+
+                <div class="benefit-icon">
+                    <a href="#" class="icon">
+                        <image src="https://cdnv2.tgdd.vn/mwg-static/common/Campaign/d8/c1/d8c1720585c5c1eaf96c0aa625ee6013.png" alt="icon" >
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="benefit">
+
+                <div class="benefit-icon">
+                    <a href="#" class="icon">
+                        <image src="https://cdnv2.tgdd.vn/mwg-static/common/Campaign/62/87/62879b9cbcf5e19cd9b7be6add6623b1.png" alt="icon">
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="benefit">
+
+                <div class="benefit-icon">
+                    <a href="#" class="icon">
+                        <image src="https://cdnv2.tgdd.vn/mwg-static/common/Campaign/ed/ce/edce14c97a32a8e84bb7f897b1fd7353.png" alt="icon">
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="benefit">
+
+                <div class="benefit-icon">
+                    <a href="#" class="icon">
+                        <image src="https://cdnv2.tgdd.vn/mwg-static/common/Campaign/e3/01/e3013bebb1ff65bd70117c79ac0bfb4f.png" alt="icon">
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CATEGORIES ================= -->
+
+        <section id="categories" class="section">
+
+            <div class="section-header">
+
+                <h2>
+                    Danh mục sản phẩm
+                </h2>
+
+                <span>
+                    Xem tất cả →
+                </span>
+
+            </div>
+
+
+            <div class="categories">
+
+
+                <div class="category" onclick="selectCategory('dien-lanh')">
+
+                    <div class="category-icon">
+                        <image src="https://cdnv2.tgdd.vn/mwg-static/dmx/Common/d5/0f/d50fdf576d13d79eb856a5b45614d780.png"></image>
+                    </div>
+
+                    <p>
+                        Điện lạnh
+                    </p>
+
+                </div>
+
+
+                <div class="category" onclick="selectCategory('gia-dung')">
+
+                    <div class="category-icon">
+                        <image src="https://cdnv2.tgdd.vn/mwg-static/dmx/Common/8c/1b/8c1b71a6a8fc062456825e6483b26e6b.png" alt="Giadung-icon" style="width: 80px; height: 80px;">
+                    </div>
+
+                    <p>
+                        Gia dụng
+                    </p>
+
+                </div>
+
+
+                <div class="category" onclick="selectCategory('tivi')">
+
+                    <div class="category-icon">
+                        <image src="https://cdnv2.tgdd.vn/mwg-static/common/Common/64/d1/64d11a09c75ea322dbc547739886e1d5.png" alt="Tivi-icon">
+                        </div>
+
+                    <p>
+                        Tivi
+                    </p>
+
+                </div>
+
+
+                <div class="category" onclick="selectCategory('Loa')">
+
+                    <div class="category-icon">
+                        <image src="https://cdnv2.tgdd.vn/mwg-static/dmx/Common/a1/88/a1881b21bddff19c10ab9115e2b5400d.png">
+                    </div>
+
+                    <p>
+                        Loa
+                    </p>
+
+                </div>
+
+
+                <div class="category" onclick="selectCategory('dien-gia-dung')">
+
+                    <div class="category-icon">
+                        <image src="https://cdnv2.tgdd.vn/mwg-static/dmx/Common/86/b7/86b7d200bdd564e597ca6ab06204d83f.png" alt="Diengiadung-icon" style="width: 80px; height: 80px;">
+                    </div>
+
+                    <p>
+                        Điện gia dụng
+                    </p>
+
+                </div>
+
+
+                <div class="category" onclick="selectCategory('may-hut-bui')">
+
+                    <div class="category-icon">
+                        <image src="https://cdnv2.tgdd.vn/mwg-static/dmx/Common/ab/4d/ab4d68106b2e8129b74ed3ad980fbf66.png" alt="Hutbui-icon" style="width: 80px; height: 80px;">
+                    </div>
+
+                    <p>
+                        Máy hút bụi
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PRODUCTS ================= -->
+
+        <section id="products" class="section">
+
+            <div class="section-header">
+
+                <h2>
+                    Sản phẩm nổi bật
+                </h2>
+
+                <span id="productTotal">
+                    12 sản phẩm
+                </span>
+
+            </div>
+
+
+            <!-- FILTER -->
+
+            <div class="filter-bar">
+
+                <div class="filter-buttons">
+
+                    <button class="filter-button active" data-category="all">
+                        Tất cả
+                    </button>
+
+                    <button class="filter-button" data-category="dien-lanh">
+                        Điện lạnh
+                    </button>
+
+                    <button class="filter-button" data-category="gia-dung">
+                        Gia dụng
+                    </button>
+
+                    <button class="filter-button" data-category="tivi">
+                        Tivi
+                    </button>
+
+                    <button class="filter-button" data-category="loa">
+                        Loa
+                    </button>
+
+                    <button class="filter-button" data-category="dien-gia-dung">
+                        Điện gia dụng
+                    </button>
+
+                </div>
+
+
+                <select id="sortSelect" class="sort-select">
+
+                    <option value="default">
+                        Sắp xếp
+                    </option>
+
+                    <option value="low">
+                        Giá thấp → cao
+                    </option>
+
+                    <option value="high">
+                        Giá cao → thấp
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- PRODUCT GRID -->
+
+            <div id="productGrid" class="products">
+            </div>
+
+
+            <!-- EMPTY -->
+             <div id="emptyMessage" class="empty">
+
+                <div class="empty-icon">
+                    🔍
+                </div>
+
+                <h3>
+                    Không tìm thấy sản phẩm
+                </h3>
+
+                <p>
+                    Hãy thử tìm kiếm với từ khóa khác.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROMOTION ================= -->
+
+        <section class="section">
+
+            <div class="promotion">
+
+
+                <div class="promotion-card">
+
+                    <h3>
+                        ⚡ Flash Sale
+                    </h3>
+
+                    <p>
+                        Săn deal điện máy giảm đến 40%.
+                        Số lượng có hạn, mua ngay hôm nay!
+                    </p>
+
+                    <div class="promotion-icon">
+                        ⚡
+                    </div>
+
+                </div>
+
+
+                <div class="promotion-card">
+
+                    <h3>
+                        💳 Trả góp 0%
+                    </h3>
+
+                    <p>
+                        Mua sắm sản phẩm điện máy với
+                        chương trình trả góp hấp dẫn.
+                    </p>
+
+                    <div class="promotion-icon">
+                        💳
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ================= CART ================= -->
+
+    <div id="cartOverlay" class="cart-overlay">
+        <div class="cart-panel">
+            <div class="cart-header">
+                <h2>
+                    🛒 Giỏ hàng
+                </h2>
+                <button class="close-cart" onclick="closeCart()">
+                    ✕
+                </button>
+            </div>
+
+
+            <div id="cartItems">
+
+                <p>
+                    Giỏ hàng đang trống.
+                </p>
+
+            </div>
+
+
+            <div class="cart-total">
+
+                <div class="cart-total-row">
+
+                    <strong>
+                        Tổng cộng
+                    </strong>
+
+                    <strong id="cartTotal" style="color:#d70018">
+                        0đ
+                    </strong>
+
+                </div>
+
+                <button class="checkout">
+                    TIẾN HÀNH THANH TOÁN
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer id="footer">
+
+        <div class="footer-container">
+
+
+            <div class="footer-column">
+
+                <h3>
+                    ĐIỆN MÁY XANH
+                </h3>
+
+                <p>
+                    Website mô phỏng bán hàng điện máy
+                    phục vụ mục đích học tập và đồ án cá nhân.
+                </p>
+
+                <p>
+                    📞 Hotline: 1900 232 461
+                </p>
+
+                <p>
+                    📍 TP. Hồ Chí Minh
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Sản phẩm
+                </h3>
+
+                <a href="#">
+                    Tủ lạnh
+                </a>
+
+                <a href="#">
+                    Máy giặt
+                </a>
+
+                <a href="#">
+                    Máy lạnh
+                </a>
+
+                <a href="#">
+                    Tivi
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Hỗ trợ
+                </h3>
+
+                <a href="#">
+                    Chính sách bảo hành
+                </a>
+
+                <a href="#">
+                    Chính sách đổi trả
+                </a>
+
+                <a href="#">
+                    Hướng dẫn mua hàng
+                </a>
+
+                <a href="#">
+                    Phương thức thanh toán
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Dịch vụ
+                </h3>
+
+                <a href="#">
+                    Giao hàng tận nơi
+                </a>
+
+                <a href="#">
+                    Lắp đặt tại nhà
+                </a>
+
+                <a href="#">
+                    Trả góp 0%
+                </a>
+
+                <a href="#">
+                    Trung tâm bảo hành
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 Đồ án website Điện Máy Xanh -
+            HTML, CSS & JavaScript
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= TOAST ================= -->
+
+    <div id="toast" class="toast">
+        Đã thêm sản phẩm vào giỏ hàng!
+    </div>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="./main.js">
+        
+    </script>
+</body>
+</html>
